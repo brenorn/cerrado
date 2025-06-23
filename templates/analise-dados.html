@@ -1,70 +1,30 @@
-<!DOCTYPE html>
-<html lang="pt-BR" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Análise de Dados - Programa Cerrado em Rede</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'cerrado-verde-profundo': '#316836',
-                        'cerrado-azul-ceu-agua': '#0070C0',
-                        'cerrado-amarelo-ipe': '#FFD400',
-                        'cerrado-ocre-terra': '#C8A05A',
-                        'institucional-cinza': '#666666',
-                        'institucional-branco': '#FFFFFF',
-                        'institucional-preto': '#000000',
-                    },
-                    fontFamily: {
-                        'montserrat': ['Montserrat', 'sans-serif'],
-                        'inter': ['Inter', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
-</head>
-<body class="bg-gray-50 font-inter">
+{% extends "base.html" %}
 
-    <!-- Header -->
-    <header class="bg-white shadow-md sticky top-0 z-50">
-        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <a href="website.html" class="flex items-center space-x-3">
-                <img src="imagens/logo_transparente.png" class="h-12" alt="Cerrado em Rede Logo">
-            </a>
-            <div class="hidden md:flex items-center space-x-8">
-                 <a href="website.html#programa" class="text-gray-700 hover:text-cerrado-amarelo-ipe transition-colors duration-300">O Programa</a>
-                <a href="website.html#quem-somos" class="text-gray-700 hover:text-cerrado-amarelo-ipe transition-colors duration-300">Quem Somos</a>
-                <a href="geoportal.html" class="text-gray-700 hover:text-cerrado-amarelo-ipe transition-colors duration-300">Geoportal</a>
-                <a href="website.html#formacao" class="text-cerrado-amarelo-ipe font-bold transition-colors duration-300">Formação</a>
-                <a href="website.html#contato" class="text-gray-700 hover:text-cerrado-amarelo-ipe transition-colors duration-300">Contato</a>
+{% block title %}Análise de Dados - Programa Cerrado em Rede{% endblock %}
+
+{% block content %}
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="text-4xl font-bold font-display text-cerrado-verde-profundo mb-4">Trilha de Formação: Análise de Dados para a Tomada de Decisão</h1>
+                <p class="text-xl text-institucional-cinza mb-12">Desenvolva habilidades em análise de dados para apoiar a tomada de decisão em contextos de desenvolvimento sustentável.</p>
+                
+                <div class="bg-cinza-claro p-8 rounded-lg shadow-inner space-y-6">
+                    <h2 class="text-3xl font-bold font-display text-cerrado-verde-profundo mb-6">Sobre o Curso</h2>
+                    <p class="text-lg leading-relaxed">Este curso capacita os participantes a coletar, processar, analisar e visualizar dados para extrair insights valiosos que possam informar políticas públicas e estratégias de sustentabilidade.</p>
+                    <p class="text-lg leading-relaxed">Serão abordadas ferramentas como Python, R e softwares de GIS para análise de dados espaciais e não espaciais, aplicados a problemas reais do Cerrado.</p>
+                    
+                    <h3 class="text-2xl font-bold font-display text-cerrado-verde-profundo pt-6 border-t border-gray-300">Módulos do Curso</h3>
+                    <ul class="list-disc list-inside space-y-2 text-lg">
+                        <li>Introdução à Análise de Dados e Pensamento Crítico</li>
+                        <li>Coleta e Limpeza de Dados (Web Scraping, APIs, Banco de Dados)</li>
+                        <li>Análise Exploratória de Dados com Python e Pandas</li>
+                        <li>Visualização de Dados com Matplotlib e Seaborn</li>
+                        <li>Introdução ao Geoprocessamento com QGIS e GeoPandas</li>
+                        <li>Projeto Final: Análise de um Estudo de Caso do Cerrado</li>
+                    </ul>
+                </div>
             </div>
-        </nav>
-    </header>
-
-    <!-- Main Content -->
-    <main class="container mx-auto px-6 py-20">
-        <h1 class="text-4xl font-bold font-montserrat text-cerrado-verde-profundo mb-4">Trilha de Formação: Análise de Dados para a Tomada de Decisão</h1>
-        <p class="text-lg text-gray-600 mb-12">Desenvolva habilidades em análise de dados para apoiar a tomada de decisão em contextos de desenvolvimento sustentável.</p>
-        
-        <div class="bg-white p-8 rounded-lg shadow-lg">
-            <h2 class="text-2xl font-bold font-montserrat text-cerrado-verde-profundo mb-4">Sobre o Curso</h2>
-            <p class="text-gray-700 leading-relaxed mb-4">Aqui teremos o conteúdo detalhado sobre o curso de Análise de Dados. Este curso capacita os participantes a coletar, processar, analisar e visualizar dados para extrair insights valiosos que possam informar políticas públicas e estratégias de sustentabilidade.</p>
-            <p class="text-gray-700 leading-relaxed">Serão abordadas ferramentas como Python, R e softwares de GIS para análise de dados espaciais e não espaciais, aplicados a problemas reais do Cerrado.</p>
         </div>
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-cerrado-verde-profundo text-white py-10 mt-20">
-        <div class="container mx-auto px-6 text-center">
-            <p>&copy; 2024 Programa Cerrado em Rede. Todos os direitos reservados.</p>
-        </div>
-    </footer>
-
-</body>
-</html>
+    </section>
+{% endblock %}

@@ -1,118 +1,29 @@
-<!DOCTYPE html>
-<html lang="pt-BR" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formação em Gestão Pública - Programa Cerrado em Rede</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome para ícones -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'cerrado-verde-profundo': '#316836',
-                        'cerrado-azul-ceu-agua': '#0070C0',
-                        'cerrado-amarelo-ipe': '#FFD400',
-                        'cerrado-ocre-terra': '#C8A05A',
-                        'institucional-cinza': '#4a5568',
-                        'cinza-claro': '#f7fafc'
-                    },
-                    fontFamily: {
-                        'sans': ['Inter', 'sans-serif'],
-                        'display': ['Montserrat', 'sans-serif']
-                    }
-                }
-            }
-        }
-    </script>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
-</head>
-<body class="bg-cinza-claro text-institucional-cinza font-sans">
+{% extends "base.html" %}
 
-    <!-- Header / Navegação (CORRIGIDO) -->
-    <header class="bg-white shadow-md sticky top-0 z-50 transition-all duration-300">
-        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <a href="{{ url_for('home') }}" class="flex items-center space-x-3">
-                <img src="{{ url_for('static', filename='imagens/logo_transparente.png') }}" class="h-12" alt="Cerrado em Rede Logo">
-                <span class="text-2xl font-bold font-display text-cerrado-verde-profundo">Cerrado em Rede</span>
-            </a>
-            <div class="hidden md:flex items-center space-x-8">
-                <a href="{{ url_for('home') }}#sobre" class="text-lg font-semibold hover:text-cerrado-azul-ceu-agua transition-colors">O Programa</a>
-                <a href="{{ url_for('geoportal') }}" class="text-lg font-semibold hover:text-cerrado-azul-ceu-agua transition-colors">Geoportal</a>
-                <a href="{{ url_for('home') }}#formacao" class="text-lg font-semibold text-cerrado-azul-ceu-agua transition-colors">Formação</a>
-                <a href="{{ url_for('home') }}#quem-somos" class="text-lg font-semibold hover:text-cerrado-azul-ceu-agua transition-colors">Quem Somos</a>
-                <a href="{{ url_for('home') }}#contato" class="bg-cerrado-verde-profundo text-white px-5 py-2 rounded-full font-bold hover:bg-cerrado-azul-ceu-agua transition-transform transform hover:scale-105">CONTATO</a>
-            </div>
-            <div class="md:hidden">
-                <button id="mobile-menu-button" class="text-cerrado-verde-profundo focus:outline-none">
-                    <i class="fas fa-bars fa-2x"></i>
-                </button>
-            </div>
-        </nav>
-        <!-- Menu Mobile (CORRIGIDO) -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
-            <a href="{{ url_for('home') }}#sobre" class="block py-3 px-6 text-lg font-semibold hover:bg-cinza-claro hover:text-cerrado-azul-ceu-agua">O Programa</a>
-            <a href="{{ url_for('geoportal') }}" class="block py-3 px-6 text-lg font-semibold hover:bg-cinza-claro hover:text-cerrado-azul-ceu-agua">Geoportal</a>
-            <a href="{{ url_for('home') }}#formacao" class="block py-3 px-6 text-lg font-semibold hover:bg-cinza-claro hover:text-cerrado-azul-ceu-agua">Formação</a>
-            <a href="{{ url_for('home') }}#quem-somos" class="block py-3 px-6 text-lg font-semibold hover:bg-cinza-claro hover:text-cerrado-azul-ceu-agua">Quem Somos</a>
-            <a href="{{ url_for('home') }}#contato" class="block py-3 px-6 font-semibold text-cerrado-verde-profundo">Contato</a>
-        </div>
-    </header>
+{% block title %}Desenvolvimento Sustentável - Programa Cerrado em Rede{% endblock %}
 
-    <!-- Main Content -->
-    <main>
-        <section id="trilha-intro" class="py-20 bg-white">
-            <div class="container mx-auto px-6 text-center">
-                <h1 class="text-5xl font-bold font-display text-cerrado-verde-profundo">Trilha de Formação</h1>
-                <h2 class="text-3xl font-semibold font-display text-cerrado-azul-ceu-agua mt-2">Gestão Pública e Governança Territorial</h2>
-                <p class="text-xl text-institucional-cinza mt-4 max-w-3xl mx-auto">Capacitação para gestores e técnicos sobre o uso de dados geoespaciais no planejamento e na governança do território.</p>
-            </div>
-        </section>
-
-        <section id="trilha-conteudo" class="py-20">
-            <div class="container mx-auto px-6">
-                <div class="bg-white p-8 rounded-lg shadow-lg">
-                    <h3 class="text-2xl font-bold font-display text-cerrado-verde-profundo mb-4">Módulos do Curso</h3>
-                    <p class="leading-relaxed">Aqui será apresentado o conteúdo detalhado da trilha de formação em Gestão Pública, incluindo módulos, carga horária, objetivos de aprendizagem e materiais de apoio.</p>
-                    <!-- Conteúdo futuro será inserido aqui -->
+{% block content %}
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="text-4xl font-bold font-display text-cerrado-verde-profundo mb-4">Trilha de Formação: Desenvolvimento Sustentável no Cerrado</h1>
+                <p class="text-xl text-institucional-cinza mb-12">Cursos sobre práticas sustentáveis, conservação da biodiversidade e economia verde no Cerrado.</p>
+                
+                <div class="bg-cinza-claro p-8 rounded-lg shadow-inner space-y-6">
+                    <h2 class="text-3xl font-bold font-display text-cerrado-verde-profundo mb-6">Sobre o Curso</h2>
+                    <p class="text-lg leading-relaxed">Esta trilha de formação foca em capacitar profissionais e comunidades para desenvolver atividades econômicas que conservem a sociobiodiversidade do Cerrado. Abordamos desde o manejo sustentável de recursos naturais até a criação de bioeconomias locais.</p>
+                    
+                    <h3 class="text-2xl font-bold font-display text-cerrado-verde-profundo pt-6 border-t border-gray-300">Módulos do Curso</h3>
+                    <ul class="list-disc list-inside space-y-2 text-lg">
+                        <li>Princípios da Sustentabilidade e Ecossistemas do Cerrado</li>
+                        <li>Manejo Sustentável de Recursos Naturais</li>
+                        <li>Bioeconomia e Cadeias de Valor da Sociobiodiversidade</li>
+                        <li>Restauração Ecológica e Recuperação de Áreas Degradadas</li>
+                        <li>Turismo de Base Comunitária e Ecoturismo</li>
+                        <li>Certificação e Mercados para Produtos Sustentáveis</li>
+                    </ul>
                 </div>
             </div>
-        </section>
-    </main>
-
-    <!-- Rodapé (CORRIGIDO) -->
-    <footer class="bg-gray-800 text-white py-8">
-        <div class="container mx-auto px-6 text-center">
-            <p>&copy; 2025 Programa Cerrado em Rede. Todos os direitos reservados.</p>
-            <div class="flex justify-center space-x-6 mt-4">
-                <a href="#" class="hover:text-cerrado-amarelo-ipe"><i class="fab fa-twitter fa-2x"></i></a>
-                <a href="#" class="hover:text-cerrado-amarelo-ipe"><i class="fab fa-instagram fa-2x"></i></a>
-                <a href="#" class="hover:text-cerrado-amarelo-ipe"><i class="fab fa-linkedin-in fa-2x"></i></a>
-            </div>
         </div>
-    </footer>
-
-    <script>
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const navLinks = document.querySelectorAll('#mobile-menu a');
-
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Fecha o menu ao clicar em um link
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
-    </script>
-
-</body>
-</html>
+    </section>
+{% endblock %}

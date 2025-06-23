@@ -4,6 +4,15 @@ Este repositório contém o código-fonte do portal web do **Programa de Educaç
 
 O portal serve como uma ferramenta central para a disseminação de conhecimento, capacitação e apoio à gestão ambiental, alinhado com os objetivos estratégicos do programa.
 
+### Status Atual
+
+**Fase 1: Fundação e Identidade Visual - Concluída**
+
+O projeto concluiu a primeira fase, que inclui:
+- A estrutura completa do site com 5 páginas estáticas (Home, Geoportal e 3 Trilhas de Formação).
+- Layout totalmente responsivo com cabeçalho e rodapé centralizados usando herança de templates (Jinja2).
+- Identidade visual consistente e deploy funcional na Vercel.
+
 ---
 
 ## Documentação do Projeto
@@ -18,10 +27,29 @@ Toda a documentação estratégica e o acompanhamento de tarefas estão centrali
 ## Pilha Tecnológica (Stack)
 
 -   **Backend:** Python com Flask.
--   **Frontend:** HTML, Tailwind CSS, JavaScript.
+-   **Frontend:** HTML, Tailwind CSS, JavaScript, e **Jinja2** para herança de templates.
 -   **Banco de Dados (Planejado):** PostgreSQL com SQLAlchemy.
 -   **Geoprocessamento (Planejado):** GeoPandas (backend), Leaflet.js (frontend).
 -   **Deploy:** Vercel.
+
+---
+
+## Estrutura do Projeto
+
+```
+/projcerrado
+├── static/
+│   ├── imagens/
+│   └── ...
+├── templates/
+│   ├── base.html           # Template base com cabeçalho e rodapé
+│   ├── website.html        # Página principal
+│   ├── geoportal.html      # Página do Geoportal
+│   └── ...                 # Demais páginas
+├── app.py                  # Arquivo principal do Flask
+├── requirements.txt        # Dependências do Python
+└── README.md               # Este arquivo
+```
 
 ---
 

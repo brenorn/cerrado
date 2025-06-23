@@ -57,10 +57,10 @@ O portal web é uma ferramenta central para a execução das 5 etapas macro do p
 
 *   **Status:** 100% Concluído.
 *   **Entregas:**
-    *   Estrutura inicial do site com Flask.
-    *   Páginas institucionais estáticas (Home, Sobre, Contato).
-    *   Aplicação da identidade visual (cores, fontes) conforme o manual da marca.
-    *   Deploy funcional na Vercel.
+    *   Estrutura inicial do site com Flask e deploy na Vercel.
+    *   Criação de páginas estáticas para Home, Geoportal e as três Trilhas de Formação.
+    *   Aplicação da identidade visual (cores, fontes, logo) em todo o site.
+    *   **Refatoração completa dos templates com herança (`base.html`), centralizando cabeçalho e rodapé para garantir consistência e facilitar a manutenção.**
 
 ### Fase 2: Estruturação do Backend e Banco de Dados (Próximos Passos)
 
@@ -99,5 +99,16 @@ O portal web é uma ferramenta central para a execução das 5 etapas macro do p
 
 ## 5. Pontos de Atenção
 
-*   **Ponto 1:** Garantir a consistência da identidade visual em todas as páginas do portal.
+*   **Ponto 1:** Garantir a consistência da identidade visual.
+    *   **Status:** Em andamento. A refatoração dos templates foi um passo crucial e concluído com sucesso.
 *   **Ponto 2:** Realizar testes rigorosos de usabilidade e acessibilidade antes do lançamento público.
+
+---
+
+## 6. Próximos Passos Imediatos
+
+*   **Objetivo:** Finalizar a Fase 1 e preparar para a Fase 2.
+*   **Tarefas:**
+    1.  Revisar e atualizar a documentação do projeto (`.md` files).
+    2.  Realizar um backup completo do estado atual do projeto.
+    3.  Iniciar o planejamento detalhado da Fase 2 (Backend e Banco de Dados).
