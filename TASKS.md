@@ -1,33 +1,43 @@
-# Plano de Tarefas - Website Cerrado em Rede
+# Plano de Tarefas - Portal Cerrado em Rede
 
-*Atualizado em 22/06/2025*
+*Este documento reflete o plano de ação definido no `PLANO_PROJETO.md`.*
 
-## Tarefas Concluídas
+---
 
--   [x] **ID-01**: Configurar estrutura inicial do projeto com HTML5, Tailwind CSS e assets.
--   [x] **ID-02**: Corrigir caminho da imagem da logo e ajustar sua exibição.
--   [x] **ID-03**: Substituir imagens placeholder por imagens temáticas do Cerrado.
--   [x] **ID-04**: Criar a seção "Quem Somos" com Missão, Visão e Valores.
--   [x] **ID-05**: Adicionar link de navegação para a seção "Quem Somos".
--   [x] **ID-06**: Garantir responsividade do layout e do menu de navegação.
--   [x] **ID-07**: Criar a página interna `geoportal.html`.
--   [x] **ID-08**: Criar a página interna `gestao-publica.html`.
--   [x] **ID-09**: Criar a página interna `desenvolvimento-sustentavel.html`.
--   [x] **ID-10**: Criar a página interna `analise-dados.html`.
--   [x] **ID-11**: Conectar os links da página inicial às novas páginas internas.
+### Fase 1: Fundação e Identidade (100% Concluída)
 
-## Tarefas em Progresso
+- [x] Estrutura inicial do site com Flask.
+- [x] Páginas institucionais estáticas (Home, Sobre, Contato).
+- [x] Aplicação da identidade visual conforme o manual da marca.
+- [x] Deploy funcional na Vercel.
+- [x] Atualização da documentação do projeto (`README`, `TASKS`, `PLANO_PROJETO`).
 
--   *[Nenhuma tarefa em progresso no momento.]*
+---
 
-## Próximas Tarefas (Pendentes)
+### Fase 2: Estruturação do Backend e Banco de Dados (Pendente)
 
--   [ ] **ID-12**: Detalhar o conteúdo da página `geoportal.html` (textos, imagens, dados).
--   [ ] **ID-13**: Detalhar o conteúdo da página `gestao-publica.html`.
--   [ ] **ID-14**: Detalhar o conteúdo da página `desenvolvimento-sustentavel.html`.
--   [ ] **ID-15**: Detalhar o conteúdo da página `analise-dados.html`.
--   [ ] **ID-16**: **[Épico]** Planejar a arquitetura para integração do assistente de IA (chatbot).
-    -   [ ] **ID-16.1**: Definir escopo e funcionalidades do chatbot.
-    -   [ ] **ID-16.2**: Escolher a tecnologia de backend (ex: Flask, FastAPI) e a API de LLM.
-    -   [ ] **ID-16.3**: Desenvolver a interface do chatbot no frontend.
-    -   [ ] **ID-16.4**: Implementar a lógica de comunicação com a API.
+*Objetivo: Tornar o site dinâmico e prepará-lo para receber conteúdo.*
+
+- [ ] **ID-F2.1:** Escolha e configuração de um banco de dados (Sugestão: PostgreSQL).
+- [ ] **ID-F2.2:** Instalação e configuração do SQLAlchemy no projeto Flask.
+- [ ] **ID-F2.3:** Criação dos modelos de dados (`Curso`, `Publicacao`, `Noticia`, `CamadaGeoespacial`).
+- [ ] **ID-F2.4:** Desenvolvimento de uma área administrativa (ex: Flask-Admin) para gerenciamento de conteúdo.
+
+---
+
+### Fase 3: Desenvolvimento dos Módulos Principais (Pendente)
+
+*Objetivo: Construir as funcionalidades centrais do portal.*
+
+- [ ] **ID-F3.1:** **Módulo Geoportal Interativo**
+    - [ ] Integrar o `Leaflet.js` no frontend.
+    - [ ] Criar rotas de API no Flask para servir dados geoespaciais do banco de dados.
+    - [ ] Permitir a visualização de camadas de dados no mapa.
+
+- [ ] **ID-F3.2:** **Módulo Plataforma de Cursos (Trilhas de Formação)**
+    - [ ] Criar uma página que lista dinamicamente os cursos disponíveis.
+    - [ ] Desenvolver um template para a página de cada curso (descrição, módulos, materiais).
+
+- [ ] **ID-F3.3:** **Módulo Biblioteca de Conhecimento**
+    - [ ] Criar uma seção para listar publicações, artigos e relatórios.
+    - [ ] Implementar funcionalidade de busca e filtro.
