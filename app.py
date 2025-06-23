@@ -2,6 +2,7 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
+
 # Rota para a página inicial
 @app.route('/')
 def home():
