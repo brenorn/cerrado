@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geoportal - Programa Cerrado em Rede</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'cerrado-verde-profundo': '#316836',
+                        'cerrado-azul-ceu-agua': '#0070C0',
+                        'cerrado-amarelo-ipe': '#FFD400',
+                        'cerrado-ocre-terra': '#C8A05A',
+                        'institucional-cinza': '#4a5568',
+                        'cinza-claro': '#f7fafc'
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                        'display': ['Montserrat', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+</head>
+<body class="bg-cinza-claro text-institucional-cinza font-sans">
+
+    <!-- Header / Navegação (CORRIGIDO) -->
+    <header class="bg-white shadow-md sticky top-0 z-50 transition-all duration-300">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="{{ url_for('home') }}" class="flex items-center space-x-3">
+                <img src="{{ url_for('static', filename='imagens/logo_transparente.png') }}" class="h-12" alt="Cerrado em Rede Logo">
+                <span class="text-2xl font-bold font-display text-cerrado-verde-profundo">Cerrado em Rede</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="{{ url_for('home') }}#sobre" class="text-lg font-semibold hover:text-cerrado-azul-ceu-agua transition-colors">O Programa</a>
+                <a href="{{ url_for('geoportal') }}" class="text-lg font-semibold text-cerrado-azul-ceu-agua transition-colors">Geoportal</a>
+                <a href="{{ url_for('home') }}#formacao" class="text-lg font-semibold hover:text-cerrado-azul-ceu-agua transition-colors">Formação</a>
+                <a href="{{ url_for('home') }}#quem-somos" class="text-lg font-semibold hover:text-cerrado-azul-ceu-agua transition-colors">Quem Somos</a>
+                <a href="{{ url_for('home') }}#contato" class="bg-cerrado-verde-profundo text-white px-5 py-2 rounded-full font-bold hover:bg-cerrado-azul-ceu-agua transition-transform transform hover:scale-105">CONTATO</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-cerrado-verde-profundo focus:outline-none">
+                    <i class="fas fa-bars fa-2x"></i>
+                </button>
+            </div>
+        </nav>
+        <!-- Menu Mobile (CORRIGIDO) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <a href="{{ url_for('home') }}#sobre" class="block py-3 px-6 text-lg font-semibold hover:bg-cinza-claro hover:text-cerrado-azul-ceu-agua">O Programa</a>
+            <a href="{{ url_for('geoportal') }}" class="block py-3 px-6 text-lg font-semibold hover:bg-cinza-claro hover:text-cerrado-azul-ceu-agua">Geoportal</a>
+            <a href="{{ url_for('home') }}#formacao" class="block py-3 px-6 text-lg font-semibold hover:bg-cinza-claro hover:text-cerrado-azul-ceu-agua">Formação</a>
+            <a href="{{ url_for('home') }}#quem-somos" class="block py-3 px-6 text-lg font-semibold hover:bg-cinza-claro hover:text-cerrado-azul-ceu-agua">Quem Somos</a>
+            <a href="{{ url_for('home') }}#contato" class="block py-3 px-6 font-semibold text-cerrado-verde-profundo">Contato</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section id="geoportal-intro" class="py-20 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-5xl font-bold font-display text-cerrado-verde-profundo">Geoportal Interativo</h1>
+                <p class="text-xl text-institucional-cinza mt-4 max-w-3xl mx-auto">Explore dados e informações geoespaciais sobre o bioma Cerrado. Uma ferramenta poderosa para pesquisa, planejamento e tomada de decisão.</p>
+            </div>
+        </section>
+
+        <section id="geoportal-categorias" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Categoria 1 -->
+                    <div class="bg-white p-8 rounded-lg shadow-lg text-center transform hover:-translate-y-2 transition-transform duration-300">
+                        <div class="text-cerrado-azul-ceu-agua mb-4"><i class="fas fa-users fa-3x"></i></div>
+                        <h3 class="text-2xl font-bold font-display text-cerrado-verde-profundo mb-3">Dados Socioeconômicos</h3>
+                        <p class="leading-relaxed">Informações sobre demografia, atividades econômicas, e infraestrutura nas regiões do Cerrado.</p>
+                    </div>
+                    <!-- Categoria 2 -->
+                    <div class="bg-white p-8 rounded-lg shadow-lg text-center transform hover:-translate-y-2 transition-transform duration-300">
+                        <div class="text-cerrado-verde-profundo mb-4"><i class="fas fa-leaf fa-3x"></i></div>
+                        <h3 class="text-2xl font-bold font-display text-cerrado-verde-profundo mb-3">Vegetação</h3>
+                        <p class="leading-relaxed">Mapas de cobertura vegetal, tipos de vegetação, áreas de desmatamento e de conservação do bioma.</p>
+                    </div>
+                    <!-- Categoria 3 -->
+                    <div class="bg-white p-8 rounded-lg shadow-lg text-center transform hover:-translate-y-2 transition-transform duration-300">
+                        <div class="text-cerrado-ocre-terra mb-4"><i class="fas fa-map-marked-alt fa-3x"></i></div>
+                        <h3 class="text-2xl font-bold font-display text-cerrado-verde-profundo mb-3">Físico-Político Institucional</h3>
+                        <p class="leading-relaxed
